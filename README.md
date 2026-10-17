@@ -63,6 +63,7 @@ For detailed tutorials, see [Deploy your Astro site](https://docs.astro.build/en
 - Optional theme visual inspiration: [Telegram public channel previews](https://t.me/s/), independently implemented with no official affiliation with Telegram Messenger Inc.
 - Optional theme visual inspiration: [Zed's Agentic Engineering page](https://zed.dev/agentic-engineering), independently implemented with no official affiliation with Zed Industries, Inc.
 - Original optional theme: Polar, a project-owned design with no external visual upstream
+- Original optional theme: Editorial, a project-owned design with no external visual upstream
 
 ## 🏗️ Deployment
 
@@ -178,12 +179,13 @@ Base is always loaded. Leave `HEADER_INJECT` empty to use Base, or load **exactl
 | TG Channel       | `/themes/tg-channel.css`       |
 | ZAE              | `/themes/zae.css`              |
 | Polar            | `/themes/polar.css`            |
+| Editorial        | `/themes/editorial.css`        |
 
 ```env
 HEADER_INJECT='<link rel="stylesheet" href="/themes/polar.css">'
 ```
 
-HN News, TG Channel, ZAE, and Polar are fixed-light themes. Do not load `/themes/terminal-base.css` directly; there is no `/themes/terminal.css`.
+HN News, TG Channel, ZAE, and Polar are fixed-light themes; Editorial follows the system light/dark preference. Do not load `/themes/terminal-base.css` directly; there is no `/themes/terminal.css`.
 
 Full configuration, light/dark behavior, platform dashboard values, custom CSS, and security notes: **[THEMES.md](./THEMES.md)**. Theme credits: **[NOTICE.md](./NOTICE.md)**.
 
