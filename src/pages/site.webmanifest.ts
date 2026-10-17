@@ -2,7 +2,7 @@ import type { APIRoute } from 'astro'
 import { getStaticProxy } from '../lib/env'
 import { getChannelInfo } from '../lib/telegram'
 
-const MANIFEST_THEME_COLOR = '#ffffff'
+const MANIFEST_THEME_COLOR = '#fbfbfc'
 const FALLBACK_MANIFEST_NAME = 'BroadcastChannel'
 
 export const GET: APIRoute = async (context) => {

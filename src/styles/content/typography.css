@@ -95,6 +95,14 @@
     a:link,
     a:visited {
       line-break: anywhere;
+      text-decoration: underline;
+      text-decoration-color: color-mix(in srgb, var(--link-color) 40%, transparent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    a:hover {
+      text-decoration-color: currentcolor;
     }
 
     pre {
@@ -163,7 +171,7 @@
     }
 
     blockquote {
-      border-left: 1px solid var(--blockquote-color);
+      border-left: 3px solid var(--accent-color);
       margin: 16px 0;
       padding-left: 1rem;
       color: var(--blockquote-color);

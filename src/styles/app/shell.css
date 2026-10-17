@@ -27,6 +27,8 @@
     align-items: center;
     gap: 1rem;
     margin-bottom: 0;
+    padding-bottom: 1.15rem;
+    border-bottom: 1px solid var(--rule-color);
   }
 
   .site-header > .avatar-link {
@@ -56,6 +58,7 @@
     overflow-wrap: anywhere;
     margin: 0;
     font-size: 1.5em;
+    letter-spacing: -0.012em;
   }
 
   .channel-avatar {
@@ -80,11 +83,12 @@
     height: 2rem;
     align-items: center;
     justify-content: center;
-    color: var(--text-color);
+    color: var(--muted-color);
     text-decoration: none;
   }
 
   .social-links a:hover {
+    color: var(--heading-color);
     text-decoration: none;
   }
 
@@ -104,14 +108,14 @@
     grid-column: 1 / -1;
     align-items: center;
     gap: 1rem;
-    padding: 0.75rem 0;
+    padding: 0.85rem 0 0;
   }
 
   .site-navigation > ul {
     display: flex;
     min-width: 0;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
     flex: 1 1 auto;
     flex-wrap: wrap;
     margin: 0;
@@ -119,14 +123,26 @@
     list-style: none;
   }
 
-  .site-navigation a {
-    text-decoration: none;
+  .site-navigation a:link,
+  .site-navigation a:visited {
+    color: var(--muted-color);
   }
 
-  .site-navigation a:hover,
+  .site-navigation a {
+    text-decoration: none;
+    transition: color 120ms ease;
+  }
+
+  .site-navigation a:hover {
+    color: var(--heading-color);
+  }
+
   .site-navigation a[aria-current='page'] {
+    color: var(--heading-color);
     text-decoration: underline;
-    text-underline-offset: 0.22em;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.3em;
   }
 
   .desktop-search,
@@ -134,7 +150,13 @@
     width: min(14rem, 100%);
     border: 1px solid var(--border-color);
     border-radius: var(--radius-panel);
-    background: var(--background-color);
+    background: var(--surface-color);
+    transition: border-color 120ms ease;
+  }
+
+  .desktop-search:focus-within,
+  .mobile-search form:focus-within {
+    border-color: var(--accent-color);
   }
 
   .mobile-search {

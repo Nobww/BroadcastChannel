@@ -15,11 +15,12 @@
   --color-link: var(--link-color);
   --color-link-hover: var(--link-hover-color);
   --color-line: var(--border-color);
+  --color-rule: var(--rule-color);
   --color-footer: var(--muted-color);
   --shadow-soft: none;
-  --radius-panel: 0;
-  --radius-chip: 0;
-  --radius-media: 0;
+  --radius-panel: 4px;
+  --radius-chip: 4px;
+  --radius-media: 8px;
 }
 
 @layer base {
@@ -29,27 +30,32 @@
     --font-main: Verdana, sans-serif;
     --font-secondary: Verdana, sans-serif;
     --font-scale: 1em;
-    --background-color: #fff;
-    --heading-color: #222;
-    --text-color: #444;
-    --link-color: #3273dc;
-    --visited-color: #8b6fcb;
-    --feed-meta-visited-color: #7354b3;
-    --code-background-color: #f2f2f2;
-    --code-color: #222;
-    --blockquote-color: #222;
+
+    /* Cool neutral ink on a blue-cast paper, one indigo accent. */
+    --background-color: #fbfbfc;
+    --heading-color: #14161b;
+    --text-color: #3b414c;
+    --link-color: #3a52c7;
+    --visited-color: #6a4fbf;
+    --feed-meta-visited-color: #5c3fa8;
+    --code-background-color: #f2f3f6;
+    --code-color: #232830;
+    --blockquote-color: #2b303a;
 
     --accent-color: var(--link-color);
-    --border-color: color-mix(in srgb, var(--text-color) 22%, transparent);
-    --link-hover-color: color-mix(in srgb, var(--link-color) 72%, var(--heading-color));
+    --border-color: color-mix(in srgb, var(--text-color) 20%, transparent);
+    --rule-color: color-mix(in srgb, var(--text-color) 12%, transparent);
+    --link-hover-color: color-mix(in srgb, var(--link-color) 62%, var(--heading-color));
     --muted-color: color-mix(in srgb, var(--text-color) 74%, transparent);
-    --surface-color: var(--background-color);
-    --code-muted-color: color-mix(in srgb, var(--code-color) 72%, var(--code-background-color));
-    --code-accent-color: color-mix(in srgb, var(--link-color) 75%, var(--code-color));
-    --code-alt-accent-color: color-mix(in srgb, var(--visited-color) 65%, var(--code-color));
+    --surface-color: color-mix(in srgb, var(--text-color) 4%, var(--background-color));
+    --selection-background-color: color-mix(in srgb, var(--link-color) 22%, transparent);
+    --focus-ring-color: var(--link-color);
+    --code-muted-color: color-mix(in srgb, var(--code-color) 58%, var(--code-background-color));
+    --code-accent-color: color-mix(in srgb, var(--link-color) 80%, var(--code-color));
+    --code-alt-accent-color: color-mix(in srgb, var(--visited-color) 70%, var(--code-color));
     --reaction-paid-color: #6b5000;
-    --reaction-paid-border-color: color-mix(in srgb, var(--reaction-paid-color) 38%, transparent);
-    --reaction-paid-background-color: color-mix(in srgb, #d5a000 14%, var(--background-color));
+    --reaction-paid-border-color: color-mix(in srgb, var(--reaction-paid-color) 34%, transparent);
+    --reaction-paid-background-color: color-mix(in srgb, #d5a000 12%, var(--background-color));
     --box-margin: 10px;
     --back-to-top-offset: 1.25rem;
     --icon-hover-filter: grayscale(1) opacity(0.8);
@@ -58,18 +64,18 @@
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --background-color: #01242e;
-      --heading-color: #eee;
-      --text-color: #ddd;
-      --link-color: #8cc2dd;
-      --visited-color: #8b6fcb;
-      --feed-meta-visited-color: #a78bdf;
-      --code-background-color: #000;
-      --code-color: #ddd;
-      --blockquote-color: #ccc;
+      --background-color: #0e1116;
+      --heading-color: #eceff4;
+      --text-color: #b9c0cc;
+      --link-color: #9db0ff;
+      --visited-color: #c0a8f5;
+      --feed-meta-visited-color: #cbb6ff;
+      --code-background-color: #070a0e;
+      --code-color: #d6dbe4;
+      --blockquote-color: #cfd5df;
       --reaction-paid-color: #f3cc65;
-      --reaction-paid-border-color: color-mix(in srgb, var(--reaction-paid-color) 52%, transparent);
-      --reaction-paid-background-color: color-mix(in srgb, var(--reaction-paid-color) 14%, var(--background-color));
+      --reaction-paid-border-color: color-mix(in srgb, var(--reaction-paid-color) 50%, transparent);
+      --reaction-paid-background-color: color-mix(in srgb, var(--reaction-paid-color) 13%, var(--background-color));
     }
   }
 }

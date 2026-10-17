@@ -7,7 +7,12 @@
 
   html {
     color-scheme: light dark;
+    background: var(--background-color);
     scroll-behavior: smooth;
+  }
+
+  ::selection {
+    background: var(--selection-background-color);
   }
 
   body {
@@ -63,6 +68,8 @@
   a:hover {
     color: var(--link-hover-color);
     text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
   }
 
   button {
@@ -80,13 +87,13 @@
   button:focus-visible,
   input:focus-visible,
   summary:focus-visible {
-    outline: 2px solid var(--link-color);
+    outline: 2px solid var(--focus-ring-color);
     outline-offset: 3px;
   }
 
   hr {
     margin: 2rem 0;
     border: 0;
-    border-top: 1px dashed var(--border-color);
+    border-top: 1px solid var(--rule-color);
   }
 }

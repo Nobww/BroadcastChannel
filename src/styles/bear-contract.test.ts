@@ -59,21 +59,35 @@ function compact(css: string): string {
   return css.replace(/\s+/g, ' ').trim()
 }
 
+function relativeLuminance(hex: string): number {
+  const channels = (hex.replace('#', '').match(/../g) ?? [])
+    .map((pair) => Number.parseInt(pair, 16) / 255)
+    .map(channel => (channel <= 0.03928 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4))
+
+  return 0.2126 * channels[0] + 0.7152 * channels[1] + 0.0722 * channels[2]
+}
+
+function contrast(foreground: string, background: string): number {
+  const [lighter, darker] = [relativeLuminance(foreground), relativeLuminance(background)].sort((a, b) => b - a)
+
+  return (lighter + 0.05) / (darker + 0.05)
+}
+
 describe('bear CSS contract', () => {
-  it('keeps the twelve Bear variables at their contract values', () => {
+  it('keeps the twelve Bear-compatible variables at their Base values', () => {
     const variables = {
       '--width': '800px',
       '--font-main': 'Verdana, sans-serif',
       '--font-secondary': 'Verdana, sans-serif',
       '--font-scale': '1em',
-      '--background-color': '#fff',
-      '--heading-color': '#222',
-      '--text-color': '#444',
-      '--link-color': '#3273dc',
-      '--visited-color': '#8b6fcb',
-      '--code-background-color': '#f2f2f2',
-      '--code-color': '#222',
-      '--blockquote-color': '#222',
+      '--background-color': '#fbfbfc',
+      '--heading-color': '#14161b',
+      '--text-color': '#3b414c',
+      '--link-color': '#3a52c7',
+      '--visited-color': '#6a4fbf',
+      '--code-background-color': '#f2f3f6',
+      '--code-color': '#232830',
+      '--blockquote-color': '#2b303a',
     }
 
     for (const [name, value] of Object.entries(variables)) {
@@ -192,5 +206,21 @@ describe('bear CSS contract', () => {
   it('hides promoted title sources only in the HN theme', () => {
     expect(compact(hnNews)).toContain('.post-content .post-title-source { display: none; }')
     expect(feed).not.toContain('post-title-source')
+  })
+
+  it('keeps every Base text role at WCAG AA against its own page background', () => {
+    const roles = [
+      { name: 'heading', light: '#14161b', dark: '#eceff4' },
+      { name: 'text', light: '#3b414c', dark: '#b9c0cc' },
+      { name: 'link', light: '#3a52c7', dark: '#9db0ff' },
+      { name: 'visited', light: '#6a4fbf', dark: '#c0a8f5' },
+    ]
+
+    const results = roles.flatMap(role => [
+      { role: `${role.name} light`, ratio: contrast(role.light, '#fbfbfc') },
+      { role: `${role.name} dark`, ratio: contrast(role.dark, '#0e1116') },
+    ])
+
+    expect(results.filter(result => result.ratio < 4.5)).toEqual([])
   })
 })

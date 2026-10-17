@@ -10,9 +10,9 @@
   }
 
   .post-entry {
-    margin-bottom: 2.75rem;
-    padding-bottom: 2.75rem;
-    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--rule-color);
   }
 
   .hn-story,
@@ -32,10 +32,6 @@
     font-size: 0.82em;
   }
 
-  body.feed .post-meta {
-    --visited-color: var(--feed-meta-visited-color);
-  }
-
   .post-meta p {
     margin: 0;
   }
@@ -44,12 +40,17 @@
     text-decoration: none;
   }
 
-  body.feed .post-meta a:visited {
-    color: var(--visited-color);
+  body.feed .post-meta {
+    --visited-color: var(--feed-meta-visited-color);
   }
 
   .post-meta a:hover {
     text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+
+  body.feed .post-meta a:visited {
+    color: var(--visited-color);
   }
 
   .timeline-dot {
@@ -137,6 +138,25 @@
 
   .post-tags a {
     position: relative;
+    padding: 0.12rem 0.55rem;
+    border: 1px solid var(--rule-color);
+    border-radius: var(--radius-chip);
+    color: var(--muted-color);
+    font-size: 0.85em;
+    transition:
+      border-color 120ms ease,
+      color 120ms ease;
+  }
+
+  .post-tags a:link,
+  .post-tags a:visited {
+    color: var(--muted-color);
+  }
+
+  .post-tags a:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    text-decoration: none;
   }
 
   .tag-icon {
@@ -160,9 +180,22 @@
     height: 2rem;
     align-items: center;
     justify-content: center;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-panel);
+    color: var(--muted-color);
+    transition:
+      border-color 120ms ease,
+      color 120ms ease;
+  }
+
+  .pagination a:link,
+  .pagination a:visited {
+    color: var(--muted-color);
   }
 
   .pagination a:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
     text-decoration: none;
   }
 

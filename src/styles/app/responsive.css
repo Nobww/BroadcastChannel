@@ -135,7 +135,10 @@
       --heading-color: #000;
       --text-color: #000;
       --link-color: #000;
+      --accent-color: #000;
       --border-color: #777;
+      --rule-color: #bbb;
+      --surface-color: #fff;
       --code-background-color: #f2f2f2;
       --code-color: #000;
       --blockquote-color: #000;
