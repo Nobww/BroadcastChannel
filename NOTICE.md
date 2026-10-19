@@ -91,4 +91,13 @@ The optional `public/themes/editorial.css` theme is an original BroadcastChannel
 - License: [GNU Affero General Public License v3.0](https://github.com/ccbikai/BroadcastChannel/blob/main/LICENSE)
 - Nature: Original project-owned design and implementation; no external visual upstream
 
+## Palette theme set
+
+The optional `public/themes/warm-orange.css`, `minimal-store.css`, `midnight.css`, `vivid-dashboard.css`, and `black-gold.css` themes are original BroadcastChannel designs. BroadcastChannel itself is the implementation source; there is no external upstream visual project for any of them. They are independently implemented and contain no third-party theme source code, fonts, or assets. All five use only system font stacks and make no network font requests.
+
+- Project: https://github.com/ccbikai/BroadcastChannel
+- Author and maintainer: Kai Bi ([ccbikai](https://github.com/ccbikai) / [miantiao-me](https://github.com/miantiao-me))
+- License: [GNU Affero General Public License v3.0](https://github.com/ccbikai/BroadcastChannel/blob/main/LICENSE)
+- Nature: Original project-owned designs and implementations; no external visual upstream
+
 These are attribution and compatibility notices only. They do not imply endorsement by or official affiliation with Bear Blog, Planetable, hugo-theme-terminal, Aria Template, Y Combinator or Hacker News, Telegram Messenger Inc., or Zed Industries, Inc., and they do not change the licensing of BroadcastChannel under the root `LICENSE`.

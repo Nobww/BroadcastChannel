@@ -22,6 +22,11 @@ Use one of these exact `.env` configurations:
 | ZAE              | Fixed light, compact document sheet | `HEADER_INJECT='<link rel="stylesheet" href="/themes/zae.css">'`              |
 | Polar            | Fixed light, minimal 760px column   | `HEADER_INJECT='<link rel="stylesheet" href="/themes/polar.css">'`            |
 | Editorial        | Follows the system preference       | `HEADER_INJECT='<link rel="stylesheet" href="/themes/editorial.css">'`        |
+| Warm Orange      | Fixed light, warm cream paper       | `HEADER_INJECT='<link rel="stylesheet" href="/themes/warm-orange.css">'`      |
+| Minimal Store    | Fixed light, cool tool surface      | `HEADER_INJECT='<link rel="stylesheet" href="/themes/minimal-store.css">'`    |
+| Midnight         | Fixed dark, navy night canvas       | `HEADER_INJECT='<link rel="stylesheet" href="/themes/midnight.css">'`         |
+| Vivid Dashboard  | Fixed light, sectioned data cards   | `HEADER_INJECT='<link rel="stylesheet" href="/themes/vivid-dashboard.css">'`  |
+| Black Gold       | Fixed dark, black-and-gold premium  | `HEADER_INJECT='<link rel="stylesheet" href="/themes/black-gold.css">'`       |
 
 Aria uses a neutral, system-sans presentation with light and dark palettes, a dashed square-line grid wash, and larger media radii. Sepia uses a fixed light palette and system-sans typography. All four Terminal variants use the same square, fixed-dark, Fira Code–first monospace design (loaded from Google Fonts when available); only their background, surface, accent, muted, border, and visited-link palettes differ.
 
@@ -31,7 +36,9 @@ Polar is an original BroadcastChannel theme with a fixed-light, 760px single-col
 
 Editorial is an original BroadcastChannel theme with a single reading column, a 92px time gutter beside each post on wide viewports, hairline entry rules that start at the reading column, 17.5px reading text at a 1.78 line height, and one terracotta accent reserved for link underlines, the current navigation item, and focus rings. It follows the system light/dark preference and uses only system font stacks, so it makes no font requests.
 
-All overrides are independently implemented for BroadcastChannel. Polar is an original project-owned design; HN News, TG Channel, and ZAE are visual interpretations, not source adaptations or official themes. No source code, CSS, fonts, or assets from Hacker News, Telegram, or Zed are bundled. See [NOTICE.md](./NOTICE.md) for provenance and non-affiliation details.
+The five palette themes — Warm Orange, Minimal Store, Midnight, Vivid Dashboard, and Black Gold — are a matched set of original BroadcastChannel designs. Warm Orange is a warm cream paper with a clay-orange accent, soft amber rules, and rounded post cards. Minimal Store is a cool near-white tool surface with hairline slate borders, compact typography, and one electric-blue accent. Midnight is a fixed-dark navy canvas with a mint-teal accent, subtle glow rings, and translucent cards. Vivid Dashboard widens the column, turns each post into a white data card with a tangerine top bar, and switches metadata to uppercase tabular figures. Black Gold pairs a near-black lacquer canvas with antique gold hairlines, serif headings, and square corners. All five fix their own `color-scheme`, so Warm Orange, Minimal Store, and Vivid Dashboard stay light while Midnight and Black Gold stay dark regardless of the system preference.
+
+All overrides are independently implemented for BroadcastChannel. Polar, Editorial, Warm Orange, Minimal Store, Midnight, Vivid Dashboard, and Black Gold are original project-owned designs; HN News, TG Channel, and ZAE are visual interpretations, not source adaptations or official themes. No source code, CSS, fonts, or assets from Hacker News, Telegram, or Zed are bundled. See [NOTICE.md](./NOTICE.md) for provenance and non-affiliation details.
 
 `/themes/terminal-base.css` is an internal shared stylesheet imported by the four Terminal entry files. Do not load it directly: it has no standalone palette. There is no `/themes/terminal.css` entry point.
 

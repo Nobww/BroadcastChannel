@@ -64,6 +64,7 @@ For detailed tutorials, see [Deploy your Astro site](https://docs.astro.build/en
 - Optional theme visual inspiration: [Zed's Agentic Engineering page](https://zed.dev/agentic-engineering), independently implemented with no official affiliation with Zed Industries, Inc.
 - Original optional theme: Polar, a project-owned design with no external visual upstream
 - Original optional theme: Editorial, a project-owned design with no external visual upstream
+- Original optional themes: Warm Orange, Minimal Store, Midnight, Vivid Dashboard, and Black Gold, project-owned designs with no external visual upstream
 
 ## 🏗️ Deployment
 
@@ -180,12 +181,17 @@ Base is always loaded. Leave `HEADER_INJECT` empty to use Base, or load **exactl
 | ZAE              | `/themes/zae.css`              |
 | Polar            | `/themes/polar.css`            |
 | Editorial        | `/themes/editorial.css`        |
+| Warm Orange      | `/themes/warm-orange.css`      |
+| Minimal Store    | `/themes/minimal-store.css`    |
+| Midnight         | `/themes/midnight.css`         |
+| Vivid Dashboard  | `/themes/vivid-dashboard.css`  |
+| Black Gold       | `/themes/black-gold.css`       |
 
 ```env
 HEADER_INJECT='<link rel="stylesheet" href="/themes/polar.css">'
 ```
 
-HN News, TG Channel, ZAE, and Polar are fixed-light themes; Editorial follows the system light/dark preference. Do not load `/themes/terminal-base.css` directly; there is no `/themes/terminal.css`.
+HN News, TG Channel, ZAE, Polar, Warm Orange, Minimal Store, and Vivid Dashboard are fixed-light themes; Midnight and Black Gold are fixed-dark themes; Editorial follows the system light/dark preference. Do not load `/themes/terminal-base.css` directly; there is no `/themes/terminal.css`.
 
 Full configuration, light/dark behavior, platform dashboard values, custom CSS, and security notes: **[THEMES.md](./THEMES.md)**. Theme credits: **[NOTICE.md](./NOTICE.md)**.
 

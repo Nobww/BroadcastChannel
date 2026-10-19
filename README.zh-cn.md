@@ -64,6 +64,7 @@ Cloudflare Pages SSR 在当前 Astro 6 + @astrojs/cloudflare v13 下不受支持
 - 可选主题视觉灵感：[Zed 的 Agentic Engineering 页面](https://zed.dev/agentic-engineering)（独立实现，与 Zed Industries, Inc. 无官方关系）
 - 原创可选主题：Polar（项目自有设计，无外部视觉上游）
 - 原创可选主题：Editorial（项目自有设计，无外部视觉上游）
+- 原创可选主题：Warm Orange、Minimal Store、Midnight、Vivid Dashboard、Black Gold（项目自有设计，无外部视觉上游）
 
 ## 🏗️ 部署
 
@@ -180,12 +181,17 @@ TARGET_WHITELIST=a.com,b.com
 | ZAE              | `/themes/zae.css`              |
 | Polar            | `/themes/polar.css`            |
 | Editorial        | `/themes/editorial.css`        |
+| Warm Orange      | `/themes/warm-orange.css`      |
+| Minimal Store    | `/themes/minimal-store.css`    |
+| Midnight         | `/themes/midnight.css`         |
+| Vivid Dashboard  | `/themes/vivid-dashboard.css`  |
+| Black Gold       | `/themes/black-gold.css`       |
 
 ```env
 HEADER_INJECT='<link rel="stylesheet" href="/themes/polar.css">'
 ```
 
-HN News、TG Channel、ZAE 和 Polar 是固定浅色主题；Editorial 跟随系统浅色/深色偏好。不要直接加载 `/themes/terminal-base.css`；项目不存在 `/themes/terminal.css`。
+HN News、TG Channel、ZAE、Polar、Warm Orange、Minimal Store 和 Vivid Dashboard 是固定浅色主题；Midnight 和 Black Gold 是固定深色主题；Editorial 跟随系统浅色/深色偏好。不要直接加载 `/themes/terminal-base.css`；项目不存在 `/themes/terminal.css`。
 
 完整配置、明暗模式、平台控制台写法、自定义 CSS 与安全边界见 **[THEMES.md](./THEMES.md)**。主题归属见 **[NOTICE.md](./NOTICE.md)**。
 
