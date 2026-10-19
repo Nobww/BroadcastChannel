@@ -28,6 +28,36 @@ Use one of these exact `.env` configurations:
 | Vivid Dashboard  | Fixed light, sectioned data cards   | `HEADER_INJECT='<link rel="stylesheet" href="/themes/vivid-dashboard.css">'`  |
 | Black Gold       | Fixed dark, black-and-gold premium  | `HEADER_INJECT='<link rel="stylesheet" href="/themes/black-gold.css">'`       |
 
+### Copy-ready values
+
+Theme paths:
+
+```plaintext
+/themes/warm-orange.css
+/themes/minimal-store.css
+/themes/midnight.css
+/themes/vivid-dashboard.css
+/themes/black-gold.css
+```
+
+Complete `HEADER_INJECT` values for the palette set. Use exactly one at a time:
+
+```plaintext
+<link rel="stylesheet" href="/themes/warm-orange.css">
+<link rel="stylesheet" href="/themes/minimal-store.css">
+<link rel="stylesheet" href="/themes/midnight.css">
+<link rel="stylesheet" href="/themes/vivid-dashboard.css">
+<link rel="stylesheet" href="/themes/black-gold.css">
+```
+
+| Theme | File | Mode |
+| ----- | ---- | ---- |
+| Warm Orange | `warm-orange.css` | Fixed light |
+| Minimal Store | `minimal-store.css` | Fixed light |
+| Midnight | `midnight.css` | Fixed dark |
+| Vivid Dashboard | `vivid-dashboard.css` | Fixed light |
+| Black Gold | `black-gold.css` | Fixed dark |
+
 Aria uses a neutral, system-sans presentation with light and dark palettes, a dashed square-line grid wash, and larger media radii. Sepia uses a fixed light palette and system-sans typography. All four Terminal variants use the same square, fixed-dark, Fira Code–first monospace design (loaded from Google Fonts when available); only their background, surface, accent, muted, border, and visited-link palettes differ.
 
 HN News is a compact, utilitarian full-post feed with a warm light canvas, orange accent, dense metadata, and a story-title hierarchy above each available post title; it does not collapse posts into summaries. TG Channel uses a cool page backdrop and one centered message column with the real channel avatar repeated for each entry, its channel title, and message time; it has no right-side profile card. ZAE uses a light, compact document sheet with a reduced identity header, technical toolbar, restrained rules, and monospace accents. These three themes deliberately fix `color-scheme: light`; they do not switch with the system preference.
